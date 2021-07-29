@@ -45,6 +45,11 @@
   padding: 1em;
 }
 
+.validation {
+  font-size: 1em;
+  color: aquamarine;
+}
+
 .list-title {
   display: list-item;
   margin: 0;
@@ -70,6 +75,11 @@
   padding: 0.5em;
   border: none;
   border-radius: 0.25em;
+}
+
+.strike {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
 .edit {
