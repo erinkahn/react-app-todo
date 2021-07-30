@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 
-export default function ToDoItem({details, item, items, setItems, count, setCount}) {
+export default function ToDoItem({count, setCount, item, todos, setTodos, details}) {
 
     const [checked, setChecked] = useState(false);
     const [strike, setStrike] = useState('');
 
     function removeItem(id) {
-        setItems(items.filter(item => item.id !== id));
+        setTodos(todos.filter(item => item.id !== id));
         setCount(count - 1);
     }
 
-    function editItem(id) {
+    function editItem() {
         // edit the text value input
     }
 
@@ -25,7 +25,7 @@ export default function ToDoItem({details, item, items, setItems, count, setCoun
     }
 
     return <>
-        <h4 className={`list-title ${strike}`}>{details.title}</h4>
+        <h4 className={`list-title ${strike}`}>{details.entry}</h4>
 
         <div className="buttons-container">
             <button className="edit" onClick={editItem}>Edit</button>
